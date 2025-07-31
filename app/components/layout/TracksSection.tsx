@@ -48,9 +48,9 @@ const TracksSection: React.FC = () => {
           {/* Left Column - Heading + Tracks */}
           <div>
             <div className="mb-8">
-              <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow">THE TRACKS</h2>
-              <p className="text-lg text-[#605C52] max-w-3xl font-inter">
-                India's best builders. Six bold tracks. No pitches, no slides, just focused <br/> execution. 
+              <h2 className="text-4xl font-bold text-black font-basier-circle-narrow">THE TRACKS</h2>
+              <p className="mt-2 text-lg text-[#605C52] max-w-3xl font-inter">
+                India&apos;s best builders. Six bold tracks. No pitches, no slides, just focused <br/> execution. 
                 We bring the space, tools, and context to power AI-led <br/>innovation from the ground up.
               </p>
             </div>
@@ -150,9 +150,9 @@ const TracksSection: React.FC = () => {
         {/* Mobile Layout */}
         <div className="lg:hidden">
           <div className="mb-8">
-            <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow">THE TRACKS</h2>
+            <h2 className="text-4xl font-bold text-black font-basier-circle-narrow">THE TRACKS</h2>
             <p className="text-lg text-[#605C52] max-w-3xl font-inter">
-              India's best builders. Six bold tracks. No pitches, no slides, just focused execution. 
+              India&apos;s best builders. Six bold tracks. No pitches, no slides, just focused execution. 
               We bring the space, tools, and context to power AI-led innovation from the ground up.
             </p>
           </div>

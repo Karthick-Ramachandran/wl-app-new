@@ -9,7 +9,7 @@ const StatsSection: React.FC = () => {
     <section className="py-16 px-3">
       <div className="w-full">
         <div className="mb-12">
-          <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow text-left">WHAT'S THE GREAT RESIDENTIAL HACK?</h2>
+          <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow text-left">WHAT&apos;S THE GREAT RESIDENTIAL HACK?</h2>
           <p className="text-lg text-[#605C52] max-w-3xl font-inter text-left">
             Two weeks of building, burning out, and belonging, with 500+ handpicked hackers, three grape-fueled tracks, and 48 hours of peer tech and cultural intensity.
           </p>

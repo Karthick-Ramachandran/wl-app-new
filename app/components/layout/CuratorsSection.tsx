@@ -80,7 +80,7 @@ const CuratorsSection: React.FC = () => {
         <div className="mb-8">
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div>
-              <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow">MEET OUR CURATORS</h2>
+              <h2 className="text-4xl font-bold text-black font-basier-circle-narrow">MEET OUR CURATORS</h2>
               <p className="text-lg text-[#605C52] max-w-3xl font-inter">
                 Tracks shaped by industry experts, thinkers, and <br/> builders at the top of their game.
               </p>

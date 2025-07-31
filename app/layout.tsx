@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
@@ -33,8 +34,8 @@ const maziusRegular = localFont({
   variable: "--font-mazius-regular",
 });
 
-const inter = localFont({
-  src: "../public/font/Inter-Regular.ttf",
+const inter = Inter({ 
+  subsets: ['latin'],
   variable: "--font-inter",
 });
 

@@ -77,8 +77,8 @@ const Footer: React.FC<FooterProps> = ({ onJoinHack }) => {
               <div>
                 <h3 className="text-lg font-semibold mb-4">SECTIONS</h3>
                 <ul className="space-y-2 text-sm">
-                  <li><a href="#" className="hover:text-white/80 transition-colors">About</a></li>
-                  <li><a href="#" className="hover:text-white/80 transition-colors">Conference</a></li>
+                  <li><a href="#hero" className="hover:text-white/80 transition-colors">About</a></li>
+                  <li><a href="#conference" className="hover:text-white/80 transition-colors">Conference</a></li>
                 </ul>
               </div>
               <div>
@@ -99,8 +99,8 @@ const Footer: React.FC<FooterProps> = ({ onJoinHack }) => {
 
             {/* Policy Links */}
             <div className="flex space-x-4 text-sm text-white/60">
-              <a href="#" className="hover:text-white/80 transition-colors">Cookie Policy</a>
-              <a href="#" className="hover:text-white/80 transition-colors">Privacy Policy</a>
+              <a href="/privacy" className="hover:text-white/80 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-white/80 transition-colors">Terms of Service</a>
             </div>
           </div>
         </div>

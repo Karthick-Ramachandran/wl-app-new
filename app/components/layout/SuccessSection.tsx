@@ -38,7 +38,7 @@ const SuccessSection: React.FC<SuccessSectionProps> = ({ onShare }) => {
           transition={{ delay: 0.4 }}
           className="text-lg text-[#605C52] mb-8"
         >
-          Thank you for joining The Great Residential H/ACC. We'll be in touch soon with updates about the hackathon and your next steps.
+          Thank you for joining The Great Residential H/ACC. We&apos;ll be in touch soon with updates about the hackathon and your next steps.
         </motion.p>
         
         <motion.div

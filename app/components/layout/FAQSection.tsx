@@ -90,7 +90,7 @@ const FAQSection: React.FC = () => {
     <section className="py-16 px-3 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h2 className="faq-section-heading mb-6">
+                      <h2 className="faq-section-heading">
             FIND YOUR WAY & GET <br /> YOUR QUESTIONS ANSWERED
           </h2>
         </div>

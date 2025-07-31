@@ -52,7 +52,7 @@ const PartnersSection: React.FC = () => {
     <section className="py-16 px-3 bg-[#F9F2E8]">
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
-          <h2 className="text-4xl font-bold text-black mb-6 font-basier-circle-narrow">OUR PARTNERS</h2>
+                      <h2 className="text-4xl font-bold text-black font-basier-circle-narrow">OUR PARTNERS</h2>
         </div>
       </div>
 

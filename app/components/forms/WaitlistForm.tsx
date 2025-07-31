@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { toast } from 'react-hot-toast';
 import { Input, Label, Button } from '../ui';
 
 interface FormData {
@@ -40,8 +39,8 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ onSubmit, isSubmitting }) =
     return requiredFields.every(field => formData[field as keyof FormData]?.trim() !== '');
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e?: React.FormEvent) => {
+    if (e) e.preventDefault();
     await onSubmit(formData);
   };
 

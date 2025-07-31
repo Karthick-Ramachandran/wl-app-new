@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
   children: React.ReactNode;
-  onClick?: () => void;
+  onClick?: (e?: React.MouseEvent | React.FormEvent) => void | Promise<void>;
   type?: 'button' | 'submit';
   disabled?: boolean;
   variant?: 'primary' | 'secondary' | 'outline';
@@ -41,7 +41,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <motion.button
       type={type}
-      onClick={onClick}
+      onClick={onClick ? (e) => onClick(e) : undefined}
       disabled={disabled || isLoading}
       className={classes}
       whileHover={{ scale: disabled ? 1 : 1.02 }}
