@@ -1,0 +1,13 @@
+export { default as HeroSection } from './HeroSection';
+export { default as SuccessSection } from './SuccessSection';
+export { default as BackgroundElements } from './BackgroundElements';
+export { default as Header } from './Header';
+export { default as StatsSection } from './StatsSection';
+export { default as TracksSection } from './TracksSection';
+export { default as ConferenceSection } from './ConferenceSection';
+export { default as CuratorsSection } from './CuratorsSection';
+export { default as PartnersSection } from './PartnersSection';
+export { default as ScheduleSection } from './ScheduleSection';
+export { default as FAQSection } from './FAQSection';
+export { default as Footer } from './Footer';
+export { default as Navigation } from './Navigation'; 

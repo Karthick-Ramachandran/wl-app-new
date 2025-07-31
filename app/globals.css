@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+/* Prevent horizontal overflow globally */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Custom input placeholder styles */
+input::placeholder {
+  font-family: var(--font-basier-circle-regular);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0%;
+  color: #605C52;
+  text-align: left;
+  opacity: 0.44;
+}
+
+/* Mobile-specific improvements */
+@media (max-width: 640px) {
+  /* Better touch targets for mobile */
+  button, input, select, textarea {
+    min-height: 44px;
+  }
+  
+  /* Better input placeholder on mobile */
+  input::placeholder {
+    font-size: 14px;
+    line-height: 150%;
+  }
+  
+  /* Prevent zoom on input focus for iOS */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"] {
+    font-size: 16px;
+  }
+}

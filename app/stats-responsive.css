@@ -1,0 +1,132 @@
+/* Base styles for the stats images container */
+.stats-images-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 500px;
+  margin-bottom: 0;
+  overflow: hidden;
+}
+
+/* Image positioning and styling */
+.stats-image {
+  position: absolute;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Image 1 - Top Left */
+.stats-image-1 {
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 240px;
+}
+
+/* Image 2 - Top Center */
+.stats-image-2 {
+  top: 0;
+  left: 260px; /* 240px + 20px gap */
+  width: 480px;
+  height: 240px;
+}
+
+/* Image 3 - Right Side (spans 2 rows) */
+.stats-image-3 {
+  top: 0;
+  left: 760px; /* 260px + 480px + 20px gap */
+  width: 440px; /* 1200px - 760px = 440px */
+  height: 500px;
+}
+
+/* Image 4 - Bottom (spans 2 columns) */
+.stats-image-4 {
+  top: 260px; /* 240px + 20px gap - now touches top images */
+  left: 0;
+  width: 740px; /* Reduced from 760px to leave gap */
+  height: 240px;
+}
+
+/* Large Desktop (1440px+) */
+@media (min-width: 1440px) {
+  .stats-images-container {
+    max-width: 1400px;
+    height: 580px;
+  }
+  
+  .stats-image-1 {
+    width: 280px;
+    height: 280px;
+  }
+  
+  .stats-image-2 {
+    left: 300px; /* 280px + 20px gap */
+    width: 560px;
+    height: 280px;
+  }
+  
+  .stats-image-3 {
+    left: 880px; /* 300px + 560px + 20px gap */
+    width: 520px; /* 1400px - 880px = 520px */
+    height: 580px;
+  }
+  
+  .stats-image-4 {
+    top: 300px; /* 280px + 20px gap */
+    width: 860px; /* Reduced to leave gap */
+    height: 280px;
+  }
+}
+
+/* Medium Desktop (1280px - 1439px) */
+@media (min-width: 1280px) and (max-width: 1439px) {
+  .stats-images-container {
+    max-width: 1200px;
+    height: 560px;
+  }
+  
+  .stats-image-1 {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .stats-image-2 {
+    left: 280px; /* 260px + 20px gap */
+    width: 520px;
+    height: 260px;
+  }
+  
+  .stats-image-3 {
+    left: 820px; /* 280px + 520px + 20px gap */
+    width: 380px; /* Increased back to 380px for better text visibility */
+    height: 560px;
+  }
+  
+  .stats-image-4 {
+    top: 280px; /* 260px + 20px gap */
+    width: 800px; /* Reduced to leave gap */
+    height: 260px;
+  }
+}
+
+/* Medium screens and up (768px+) - Show desktop grid */
+@media (min-width: 768px) {
+  .stats-images-container {
+    display: block;
+  }
+}
+
+/* Small screens (up to 767px) - Hide desktop grid */
+@media (max-width: 767px) {
+  .stats-images-container {
+    display: none;
+  }
+}
+
+/* Ensure images maintain aspect ratio */
+.stats-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+} 
