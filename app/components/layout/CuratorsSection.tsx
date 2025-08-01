@@ -63,7 +63,14 @@ const CuratorsSection: React.FC = () => {
   ];
 
   const handleCuratorClick = (index: number) => {
-    setSelectedCurator(selectedCurator === index ? null : index);
+    if (selectedCurator === index) {
+      // If clicking X button, hide the title by clearing both states
+      setSelectedCurator(null);
+      setHoveredCurator(null);
+    } else {
+      // If clicking + button, show the title
+      setSelectedCurator(index);
+    }
   };
 
   const handleCuratorHover = (index: number) => {
@@ -122,12 +129,61 @@ const CuratorsSection: React.FC = () => {
       </div>
 
       {/* Curators Horizontal Scroll - Full Width */}
-      <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex gap-6 min-w-max pl-3 pr-3">
+      <div className="overflow-hidden">
+        <div className="flex animate-scroll">
+          {/* First set of curators */}
           {curators.map((curator, index) => (
             <motion.div
-              key={index}
-              className="relative cursor-pointer flex-shrink-0 group"
+              key={`first-${index}`}
+              className="relative cursor-pointer flex-shrink-0 group mx-3"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              style={{ width: '300px' }}
+              onMouseEnter={() => handleCuratorHover(index)}
+              onMouseLeave={handleCuratorLeave}
+            >
+              <div className="relative rounded-lg overflow-hidden">
+                <Image
+                  src={curator.image}
+                  alt={curator.name}
+                  width={300}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+
+                {/* Mobile Button */}
+                <button
+                  onClick={() => handleCuratorClick(index)}
+                  className="lg:hidden absolute top-3 right-3 bg-white shadow-lg flex items-center justify-center"
+                  style={{
+                    width: '32px',
+                    height: '32px',
+                    borderRadius: '50%',
+                    minWidth: '32px',
+                    minHeight: '32px'
+                  }}
+                >
+                  <svg className="w-4 h-4 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={selectedCurator === index ? "M6 18L18 6M6 6l12 12" : "M12 6v6m0 0v6m0-6h6m-6 0H6"} />
+                  </svg>
+                </button>
+
+                {/* Name and conditional title (always visible at bottom) */}
+                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/80 to-transparent">
+                  <h3 className="curator-name mb-1">{curator.name}</h3>
+                  {(selectedCurator === index || hoveredCurator === index) && (
+                    <p className="text-white text-sm opacity-90">{curator.title}</p>
+                  )}
+                </div>
+              </div>
+            </motion.div>
+          ))}
+          {/* Duplicate set for seamless loop */}
+          {curators.map((curator, index) => (
+            <motion.div
+              key={`second-${index}`}
+              className="relative cursor-pointer flex-shrink-0 group mx-3"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               style={{ width: '300px' }}

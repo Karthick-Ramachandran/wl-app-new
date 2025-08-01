@@ -13,26 +13,26 @@ const TracksSection: React.FC = () => {
       name: "AI x Systems",
       description: "Developing AI solutions tailored to India's unique needs, from Indic AI that embraces local languages and cultures, to building scalable AI infrastructure.",
       borderGradient: "linear-gradient(180deg, #4400B4 0%, #88438C 100%)",
-      image: "/images/new-images/infra-track-image.png",
+      image: "/tracks/infra-track-image.png",
       isExpanded: true
     },
     {
       name: "AI x Culture",
       description: "Exploring the intersection of AI and cultural expression, from digital art to preserving traditional knowledge through technology.",
       borderGradient: "linear-gradient(180deg, #293D52 0%, #5C89B8 100%)",
-      image: "/images/new-images/mixed-media-track-image.png"
+      image: "/tracks/mixed-media-track-image.png"
     },
     {
       name: "AI x Matter",
       description: "Building AI solutions for the physical world, from smart materials to sustainable manufacturing and environmental monitoring.",
       borderGradient: "linear-gradient(180deg, #831400 0%, #FF5E41 100%)",
-      image: "/images/new-images/hardware-track-image.png"
+      image: "/tracks/hardware-track-image.png"
     },
     {
       name: "AI x Society",
       description: "Creating AI-powered solutions for social challenges, from healthcare accessibility to education and community development.",
       borderGradient: "linear-gradient(180deg, #0C261D 0%, #2E8C6B 96.15%)",
-      image: "/images/new-images/civic-track-image.png"
+      image: "/tracks/civic-track-image.png"
     }
   ];
 
