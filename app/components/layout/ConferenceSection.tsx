@@ -10,7 +10,7 @@ interface ConferenceCardProps {
 
 const ConferenceCard: React.FC<ConferenceCardProps> = ({ title, description, image }) => {
   return (
-    <div className="rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300">
+    <div className="rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300">
       <div className="relative h-48">
         <Image
           src={image}
